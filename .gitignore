@@ -1,0 +1,6 @@
+*.*
+!/JavaScriptPlayground/package.json
+!/README.md
+!/JavaScriptPlayground/**/*.js
+!/.gitignore
+**/node_modules

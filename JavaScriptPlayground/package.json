@@ -1,0 +1,18 @@
+{
+  "name": "java-script-playground",
+  "version": "0.0.0",
+  "description": "JavaScriptPlayground",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "jest": "^27.5.1",
+    "treemap-js": "^1.2.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "app": "node app.js"
+  }
+}
