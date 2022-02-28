@@ -13,6 +13,8 @@
   },
   "scripts": {
     "test": "jest",
-    "app": "node app.js"
+    "app": "node app.js",
+    "testSummaryRanges": "jest SummaryRanges.test",
+    "testSummaryRanges_withName": "jest SummaryRanges.test -t Summary-Ranges-Tests"
   }
 }
