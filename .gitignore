@@ -3,6 +3,8 @@
 !/JavaScriptPlayground/package-lock.json
 !/README.md
 !/JavaScriptPlayground/**/*.js
-!/JavaScriptPlayground/**/*.mjs
+!/JavaScriptPlayground/**/*.cjs
 !/.gitignore
+!/.babelrc
 **/node_modules
+**/coverage

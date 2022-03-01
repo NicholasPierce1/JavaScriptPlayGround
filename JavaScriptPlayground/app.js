@@ -24,23 +24,23 @@
  */
 
 // const Link = require("./TestFolder/link.js"); // works well
-const Link = require("./TestFolder/link");
-const Sum = require("./TestFolder/sum.js");
+
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
+const Link = require("./TestFolder/link.cjs");
+const Sum = require("./TestFolder/sum.cjs");
 const TreeMap = require("treemap-js");
 
-// import * as Foo from "./TestFolder/moduleTest";
-
-let ModuleTest = null;
+import * as Foo from "./TestFolder/moduleTest.js";
 
 main();
 
-async function main() {
-
-    ModuleTest = await import("./TestFolder/moduleTest.mjs");
+function main() {
 
     console.log('Hello world');
     Link.testLink();
     console.log(`Sum of 5 + 5 = ${Sum.sum(5, 5)}`);
 
-    ModuleTest.foo();
+    Foo.foo();
 }

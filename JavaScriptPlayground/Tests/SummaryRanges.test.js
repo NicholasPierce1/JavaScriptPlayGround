@@ -1,7 +1,9 @@
-const SummaryRanges = require("../TestFolder/SummaryRanges");
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 
-let ModuleTestPromise = awaitImports();
-let ModuleTest = null;
+const SummaryRanges = require("../TestFolder/SummaryRanges.cjs");
+
+import * as ModuleTest from "../TestFolder/moduleTest.js";
 
 const inputData = [
     {
@@ -38,9 +40,8 @@ describe(
 
         test(
             "valid",
-            async () => {
+            () => {
 
-                await ModuleTestPromise;
                 ModuleTest.foo();
                 
                inputData.forEach(
@@ -64,11 +65,3 @@ describe(
 
     }
 );
-
-async function awaitImports() {
-    /*
-     * optimal: start all imports and await each one
-     * total time = max(ofAllImports)
-     */
-    ModuleTest = await import("../TestFolder/moduleTest.mjs");
-}
