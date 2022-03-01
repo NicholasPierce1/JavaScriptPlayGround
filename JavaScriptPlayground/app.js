@@ -28,10 +28,19 @@ const Link = require("./TestFolder/link");
 const Sum = require("./TestFolder/sum.js");
 const TreeMap = require("treemap-js");
 
+// import * as Foo from "./TestFolder/moduleTest";
+
+let ModuleTest = null;
+
 main();
 
-function main() {
+async function main() {
+
+    ModuleTest = await import("./TestFolder/moduleTest.mjs");
+
     console.log('Hello world');
     Link.testLink();
     console.log(`Sum of 5 + 5 = ${Sum.sum(5, 5)}`);
+
+    ModuleTest.foo();
 }

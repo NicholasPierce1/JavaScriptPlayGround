@@ -1,6 +1,8 @@
 *.*
 !/JavaScriptPlayground/package.json
+!/JavaScriptPlayground/package-lock.json
 !/README.md
 !/JavaScriptPlayground/**/*.js
+!/JavaScriptPlayground/**/*.mjs
 !/.gitignore
 **/node_modules

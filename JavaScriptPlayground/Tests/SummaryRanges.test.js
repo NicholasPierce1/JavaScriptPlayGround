@@ -1,5 +1,8 @@
 const SummaryRanges = require("../TestFolder/SummaryRanges");
 
+let ModuleTestPromise = awaitImports();
+let ModuleTest = null;
+
 const inputData = [
     {
         sortedNumbers: Array.of(1, 2, 3, 4, 5),
@@ -35,7 +38,10 @@ describe(
 
         test(
             "valid",
-            () => {
+            async () => {
+
+                await ModuleTestPromise;
+                ModuleTest.foo();
                 
                inputData.forEach(
                    function (input) {
@@ -58,3 +64,11 @@ describe(
 
     }
 );
+
+async function awaitImports() {
+    /*
+     * optimal: start all imports and await each one
+     * total time = max(ofAllImports)
+     */
+    ModuleTest = await import("../TestFolder/moduleTest.mjs");
+}

@@ -8,13 +8,17 @@
   },
   "type": "commonjs",
   "dependencies": {
-    "jest": "^27.5.1",
+    "linked-list": "^3.0.2",
     "treemap-js": "^1.2.1"
   },
   "scripts": {
-    "test": "jest",
+    "old_test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "app": "node app.js",
-    "testSummaryRanges": "jest SummaryRanges.test",
-    "testSummaryRanges_withName": "jest SummaryRanges.test -t Summary-Ranges-Tests"
+    "testSummaryRanges": "node --experimental-vm-modules node_modules/jest/bin/jest.js SummaryRanges.test",
+    "testSummaryRanges_withName": "node --experimental-vm-modules node_modules/jest/bin/jest.js SummaryRanges.test -t Summary-Ranges-Tests"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
   }
 }
