@@ -1,9 +1,9 @@
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 
-const SummaryRanges = require("../TestFolder/SummaryRanges.cjs");
+const SummaryRanges = require("../Src/CJS/SummaryRanges.cjs");
 
-import * as ModuleTest from "../TestFolder/moduleTest.js";
+import * as ModuleTest from "../Src/ESM/moduleTest.js";
 
 const inputData = [
     {

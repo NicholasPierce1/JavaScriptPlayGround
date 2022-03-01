@@ -28,11 +28,11 @@
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 
-const Link = require("./TestFolder/link.cjs");
-const Sum = require("./TestFolder/sum.cjs");
+const Link = require("./Src/CJS/link.cjs");
+const Sum = require("./Src/CJS/sum.cjs");
 const TreeMap = require("treemap-js");
 
-import * as Foo from "./TestFolder/moduleTest.js";
+import * as Foo from "./Src/ESM/moduleTest.js";
 
 main();
 
