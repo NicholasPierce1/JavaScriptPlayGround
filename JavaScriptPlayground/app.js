@@ -43,4 +43,8 @@ function main() {
     console.log(`Sum of 5 + 5 = ${Sum.sum(5, 5)}`);
 
     Foo.foo();
+
+    let power = 0;
+    console.log(10 ** power++);
+    console.log(10 ** ++power);
 }

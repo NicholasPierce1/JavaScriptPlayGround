@@ -16,7 +16,8 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "app": "node app.js",
     "testSummaryRanges": "node --experimental-vm-modules node_modules/jest/bin/jest.js SummaryRanges.test",
-    "testSummaryRanges_withName": "node --experimental-vm-modules node_modules/jest/bin/jest.js SummaryRanges.test -t Summary-Ranges-Tests"
+    "testSummaryRanges_withName": "node --experimental-vm-modules node_modules/jest/bin/jest.js SummaryRanges.test -t Summary-Ranges-Tests",
+    "testValueSum": "node --experimental-vm-modules node_modules/jest/bin/jest.js ValueSum.test -t Value-Sum-Tests"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
